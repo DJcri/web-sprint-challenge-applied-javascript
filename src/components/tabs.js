@@ -1,4 +1,5 @@
 import axios from "axios";
+import { cardAppender } from "./card";
 
 const Tabs = (topics) => {
   // TASK 3
@@ -22,6 +23,9 @@ const Tabs = (topics) => {
     const div = document.createElement("div");
     div.textContent = topic;
     div.className = "tab";
+    div.addEventListener("click", (e) => {
+      cardAppender(".cards-container", topic);
+    });
     return div;
   });
 

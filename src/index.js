@@ -12,4 +12,4 @@ worker.start();
 
 headerAppender(".header-container");
 tabsAppender(".tabs-container");
-cardAppender(".cards-container");
+cardAppender(".cards-container", "javascript");
