@@ -57,7 +57,7 @@ const cardAppender = (selector, topic) => {
     .get(`https://lambda-times-api.herokuapp.com/articles`)
     .then((res) => {
       Array.from(document.querySelectorAll(".card")).forEach((card) => {
-        card.remove;
+        card.remove();
       });
       for (const article in res.data.articles[topic]) {
         const actualArticle = res.data.articles[topic][article];
