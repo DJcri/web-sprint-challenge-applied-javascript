@@ -59,6 +59,7 @@ const cardAppender = (selector, topic) => {
       Array.from(document.querySelectorAll(".card")).forEach((card) => {
         card.remove();
       });
+      console.log(res.data.articles);
       for (const article in res.data.articles[topic]) {
         const actualArticle = res.data.articles[topic][article];
         if (actualArticle) {

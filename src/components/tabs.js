@@ -24,7 +24,7 @@ const Tabs = (topics) => {
     div.textContent = topic;
     div.className = "tab";
     div.addEventListener("click", (e) => {
-      cardAppender(".cards-container", topic);
+      cardAppender(".cards-container", topic.split(".")[0]);
     });
     return div;
   });
